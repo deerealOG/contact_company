@@ -11,23 +11,27 @@
       $(document).ready(function () {
         $(".down").click(function (e) {
           $(".profileDropdown").slideToggle(".show");
+          $(this).toggleClass('rotate');
           e.stopPropagation();
         });
 
         $(document).on("click", function (e) {
           if ($(e.target).closest(".profileDropdown").length === 0) {
             $(".profileDropdown").hide();
+            $('.down').removeClass('rotate');
             e.stopPropagation();
           }
         });
         $("#title").click(function (e) {
           $(".side-navcont").slideToggle(".show");
+          $('.dropdown').toggleClass('rotate');
           e.stopPropagation();
         });
 
         $(document).on("click", function (e) {
           if ($(e.target).closest(".side-navcont").length === 0) {
             $(".side-navcont").hide();
+            $('.dropdown').removeClass('rotate');
             e.stopPropagation();
           }
         });
@@ -135,7 +139,7 @@
           </ul>
         </div>
         <span
-          class="iconify"
+          class="iconify dropdown"
           data-icon="bi:caret-down-fill"
           style="font-size: 20px"
         ></span>

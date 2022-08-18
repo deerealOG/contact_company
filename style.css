@@ -14,7 +14,7 @@ body {
 #navbar {
   position: absolute;
   background: #262262;
-  height: 80px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +49,7 @@ body {
 }
 #avatar img {
   height: auto;
-  width: 50px;
+  width: 40px;
 }
 #username {
   padding: 0;
@@ -69,12 +69,10 @@ body {
   cursor: pointer;
 }
 #logo img {
-  height: 3.375rem;
+  height: 40px;
 }
 
-#hamburger {
-  color: #ffffff;
-}
+
 #desktop {
   display: none;
 }
@@ -97,13 +95,13 @@ body {
 
 .hamburger div {
   position: relative;
-  top: -6px;
+  top: -0.7em;
   right: 5%;
-  width: 2.6em;
-  height: 6px;
+  width: 2em;
+  height: 4px;
   border-radius: 3px;
   background: #f37821;
-  margin-top: 8px;
+  margin-top: 6px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -160,7 +158,7 @@ Animations
 }
 #toggle:checked + .hamburger .meat {
   transform: rotate(45deg);
-  margin-top: -6px;
+  margin-top: -4px;
 }
 
 #toggle:checked + .hamburger + .nav {
@@ -181,7 +179,7 @@ Animations
 }
 #toggle:checked + .hamburger .meat {
   transform: rotate(45deg);
-  margin-top: -6px;
+  margin-top: -4px;
 }
 
 #toggle:checked + .hamburger + .nav {
@@ -207,15 +205,15 @@ Animations
   width: 100%;
   height: 40px;
   left: 0px;
-  top: 133px;
+  top: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 20px;
+  padding: 0px 5vw;
 }
 #dropDownCont {
   position: fixed;
-  top: 80px;
+  top: 60px;
   right: 0px;
   z-index: 100;
   background: #262262;
@@ -291,11 +289,12 @@ main {
 }
 #container {
   position: relative;
-  top: 200px;
+  top: 180px;
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding-bottom: 100px;
+  padding-left: 5vw
 }
 #profilePic {
   display: flex;
@@ -342,6 +341,15 @@ aside {
 .iconify {
   cursor: pointer;
 }
+.rotate {
+  transform: rotate(180deg);
+  transition: all .5s ease;
+}
+
+.down, .dropdown {
+  transition: all .5s ease;
+}
+
 
 @media all and (min-width: 375px) {
 }
@@ -562,10 +570,15 @@ aside {
   #navcta {
     display: none;
   }
-  #brandname {
-    left: 90px;
+  #logo img {
+    height: 45px;
   }
-
+  .nav {
+    display: none;
+  }
+  #title {
+    top: 120px;
+  }
   #desktop {
     display: flex;
     align-items: center;
